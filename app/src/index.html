@@ -1,0 +1,44 @@
+<header>
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    iframe {
+      border: none;
+      overflow: hidden;
+    }
+
+    .sidebar {
+      width: 17.5rem;
+      border-right: 1px solid #eee;
+    }
+
+    .wrapper {
+      flex: 1 1 auto;
+      display: flex;
+    }
+
+    .wrapper iframe {
+      flex: 1;
+    }
+  </style>
+</header>
+
+<iframe
+  src="http://localhost:8888/sidebar"
+  class="sidebar"
+  scrolling="no">
+</iframe>
+
+<div class="wrapper">
+  <iframe
+    src="http://localhost:8888/dashboard/"
+    name="wrapper"
+    scrolling="no">
+  </iframe>
+</div>

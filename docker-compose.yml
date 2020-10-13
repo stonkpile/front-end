@@ -1,0 +1,52 @@
+version: '2'
+
+services:
+  app:
+    container_name: app
+    build: app
+    networks:
+      - local-network
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+
+  sidebar:
+    container_name: sidebar
+    build: sidebar
+    networks:
+      - local-network
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+
+  dashboard:
+    container_name: dashboard
+    build: dashboard
+    networks:
+      - local-network
+    # volumes:
+    #   - ./dashboard:/var/www/html
+
+  portfolio:
+    container_name: portfolio
+    build: portfolio
+    networks:
+      - local-network
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+
+  nginx:
+    container_name: nginx
+    build: nginx
+    ports:
+      - "8888:80"
+    networks:
+      - local-network
+    depends_on:
+      - sidebar
+      - dashboard
+      - portfolio
+
+networks:
+  local-network:
