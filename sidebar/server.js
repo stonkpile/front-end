@@ -1,7 +1,7 @@
 const Koa = require('koa')
 const app = new Koa()
 const serve = require('koa-static-server')
-const port = parseInt(process.env.PORT, 10)
+const port = Number(process.env.PORT)
 
 app.use(serve({
   rootDir: 'src',

@@ -24,6 +24,8 @@ services:
     build: dashboard
     networks:
       - local-network
+    ports:
+      - "80:80"
     # volumes:
     #   - ./dashboard:/var/www/html
 
