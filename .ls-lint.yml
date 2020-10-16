@@ -1,0 +1,8 @@
+ls:
+  .js: camelCase
+  .ts: camelCase
+  .d.ts: camelCase
+
+ignore:
+  - .git
+  - node_modules

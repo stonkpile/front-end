@@ -3,7 +3,7 @@ version: '2'
 services:
   app:
     container_name: app
-    build: app
+    build: apps/app
     networks:
       - local-network
     environment:
@@ -12,7 +12,7 @@ services:
 
   sidebar:
     container_name: sidebar
-    build: sidebar
+    build: apps/sidebar
     networks:
       - local-network
     environment:
@@ -21,17 +21,15 @@ services:
 
   dashboard:
     container_name: dashboard
-    build: dashboard
+    build: apps/dashboard
     networks:
       - local-network
     ports:
       - "80:80"
-    # volumes:
-    #   - ./dashboard:/var/www/html
 
   portfolio:
     container_name: portfolio
-    build: portfolio
+    build: apps/portfolio
     networks:
       - local-network
     environment:

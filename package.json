@@ -1,0 +1,21 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "description": "I'm experimenting with multi frontends, while trying to strangle a monolith",
+  "main": "index.js",
+  "scripts": {
+    "lint:ls": "npx @ls-lint/ls-lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stonkpile/front-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stonkpile/front-end/issues"
+  },
+  "homepage": "https://github.com/stonkpile/front-end#readme"
+}
